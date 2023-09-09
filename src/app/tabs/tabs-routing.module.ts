@@ -23,7 +23,11 @@ const routes: Routes = [
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
-      }
+      },
+      {
+        path: 'product-details/:id/:nome/:imagem/:valor',
+        loadChildren: () => import('../product-details/product-details.module').then(m => m.ProductDetailsPageModule)
+      },
     ]
   },
   {

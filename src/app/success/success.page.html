@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>TATS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <strong class="titulo-grande">Pedido feito com sucesso!</strong>
+    <br />
+    <strong class="subtitulo">Agradecemos a preferência</strong>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button
+    expand="block"
+    style="--border-radius: 2px"
+    class="ion-fixed ion-bottom"
+    (click)="catalogo()">
+    Voltar ao catálogo
+  </ion-button>
+  <ion-button
+    id="envia-pedido"
+    expand="block"
+    style="--border-radius: 2px"
+    class="ion-fixed ion-bottom"
+    (click)="login()">
+    Sair
+  </ion-button>
+</ion-footer>

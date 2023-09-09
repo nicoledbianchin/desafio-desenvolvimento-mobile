@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/apps/tabs/tab1"></ion-back-button>
+    <ion-title>
+      Detalhes do Produto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-img [src]="produto.imagem"></ion-img>
+      <ion-card-title>{{produto.nome}}</ion-card-title>
+      <ion-card-subtitle>Preço: R$  {{produto.valor}}</ion-card-subtitle>
+      <ion-card-subtitle>Identificação: {{produto.id}}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" (click)="adicionarCarrinho()">Adicionar ao Carrinho</ion-button>
+</ion-content>
+ 

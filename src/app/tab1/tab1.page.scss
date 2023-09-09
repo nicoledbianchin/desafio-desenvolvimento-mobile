@@ -1,0 +1,40 @@
+.conteudo-titlo {
+    padding: 0;
+    margin: 0;
+}
+ 
+.thumbnail {
+    width: 100%;
+    padding: 0;
+}
+
+.coluna-thumbnail {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-info ion-col {
+    margin: 0;
+    padding: 0;
+}
+
+ion-card-title {
+    font-size: large;
+}
+
+ion-title {
+    font-size: xx-large;
+}
+
+ion-card-content  {
+    margin: 0;
+    padding: 0;
+}
+
+ion-item-divider {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+}

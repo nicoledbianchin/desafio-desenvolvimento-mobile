@@ -1,0 +1,67 @@
+{
+    "catalogo": {
+        "Placas": [
+            {
+                "id": 1,
+                "valor": 12.40,
+                "nome": "Placa alta tensão",
+                "imagem": "../../assets/img/icon-alta-tensao.jpeg"
+            },
+            {
+                "id": 2,
+                "valor": 10.60,
+                "nome": "Placa líquido iflamável",
+                "imagem": "../../assets/img/icon-liquido-inflamavel.jpeg"
+            },
+            {
+            "id": 3,
+            "valor": 10.60,
+            "nome": "Placa não entre",
+            "imagem": "../../assets/img/icon-nao-entre.jpeg"
+            }
+        ],
+        "Acessorios": [
+            {
+                "id": 1,
+                "valor": 12.40,
+                "nome": "Cone de sinalização",
+                "imagem": "../../assets/img/icon-cone-sinal.jpeg"
+            },
+            {
+                "id": 2,
+                "valor": 10.60,
+                "nome": "Colete de sinalização",
+                "imagem": "../../assets/img/icon-colete-sinal.jpeg"
+            }
+        ],
+        "Adesivos": [
+            {
+            "id": 1,
+            "valor": 12.40,
+            "nome": "Adesivo alta tensão",
+            "imagem": "../../assets/img/icon-alta-tensao-adesivo.jpeg"
+            },
+            {
+                "id": 2,
+                "valor": 10.60,
+                "nome": "Adesivo coleta seletiva",
+                "imagem": "../../assets/img/icon-coleta-seletiva.jpeg"
+            },
+            {
+            "id": 3,
+            "valor": 10.60,
+            "nome": "Adesivo alerta geral",
+            "imagem": "../../assets/img/icon-alerta-adesivo.jpeg"
+            }
+        ]
+    },
+    "carrinho": [ 
+            {
+                "id": 3,
+                "valor": 10.60,
+                "nome": "Adesivo alerta geral",
+                "quantidade": 1
+            }
+        ]
+    
+}
