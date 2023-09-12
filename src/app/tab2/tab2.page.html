@@ -6,11 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!-- <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Cientes próximos</ion-title>
     </ion-toolbar>
   </ion-header>
- <!-- criar integração com mapas com pontos para mostrar clientes-->
+</ion-content> -->
+
+<ion-content>
+  <capacitor-google-map #map></capacitor-google-map>
 </ion-content>
