@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>TATS</ion-title>
+    <ion-title class="titulo-header">TATS</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="conteudo" style="background-color: mediumblue;">
   <ion-row>
-    <ion-col>
+    <ion-col class="titulo-conteudo">
       <ion-title>Login</ion-title>
     </ion-col>
   </ion-row>
@@ -24,13 +24,13 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" expand="block" (click)="login()">Entrar</ion-button>
+        <ion-button type="submit" color="dark" expand="block" (click)="login()">Entrar</ion-button>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" expand="block" (click)="cadastro()">Cadastre-se</ion-button>
+        <ion-button type="submit" color="dark" expand="block" (click)="cadastro()">Cadastre-se</ion-button>
       </ion-col>
     </ion-row>
   </form>
