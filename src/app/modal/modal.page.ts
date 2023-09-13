@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./modal.page.scss'],
 })
 export class ModalPage implements OnInit {
-  @Input() marker: any;
+  @Input() cliente: any;
 
   constructor() { }
 

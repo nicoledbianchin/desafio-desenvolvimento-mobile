@@ -18,19 +18,19 @@
   </div>
   
   <ion-list lines="none">
-    <ion-item-sliding *ngFor="let cartItem of carrinho">
+    <ion-item-sliding *ngFor="let item of carrinho">
       <ion-item>
         <ion-grid class="grid">
           <ion-row class="linha-item">
-            <ion-col size="8">{{cartItem.nome}}</ion-col>
+            <ion-col size="8">{{item.nome}}</ion-col>
             <ion-col size="4" class="ion-text-end">
-              <ion-text color="medium">{{cartItem.quantidade}} x R$ {{cartItem.valor}}</ion-text>
+              <ion-text color="medium">{{item.quantidade}} x R$ {{item.valor}}</ion-text>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-item>  
       <ion-item-options side="end">
-        <ion-item-option (click)="removeItem(cartItem.key)" color="danger">Remover</ion-item-option>
+        <ion-item-option (click)="removeItem(item.key)" color="danger">Remover</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>

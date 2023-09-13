@@ -21,9 +21,6 @@ const firebaseConfig = {
   appId: "1:895511470489:web:05d60c1320e4cef9e73308"
 };
 
-//AIzaSyCUcp4qVaSfiWaplQULTP6rExLV4eJRV8w
-
-
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,

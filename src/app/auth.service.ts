@@ -12,46 +12,34 @@ export class AuthService {
   }
 
   async registrarUsuario(email: string, senha: string) {
-    this.registrar(email, senha).then(ref => {
-      console.log('Novo usuário registrado: ' + ref.result?.user.uid);
-    });
-  }
-
-  private async registrar(email: string, senha: string) {
     try {
+      const result = await this.fbAuth.createUserWithEmailAndPassword(
+          email, senha);
+      console.log('Novo usuário registrado: ' + result?.user?.uid);
+
+      return { result: result } as UserResponse;
+    } catch (error) {
+      console.log("Ocorreu um erro ao tentar registrar: " + error)
+
       return  {
-        result: await this.fbAuth.createUserWithEmailAndPassword(
-          email, senha)
-      } as UserResponse;
-    } catch (e) {
-      console.log(e);
-      return  {
-        error: e
+        error: error
       } as UserResponse;
     }
   }
 
-  login(email: string, senha: string, nav: Router, callback: { (email: string, nav: { navigate: (arg0: string[]) => void; }): void; (arg0: string, arg1: any): void; }) {
-    this.execLogin(email, senha).then(ref => {
-      if (ref.error) {
-        throw new Error("Usuário inválido");
-      } else {
-        callback(email, nav);
-      }
-    });
-  }
+  async login(email: string, senha: string, nav: Router, callback: { (email: string, nav: { navigate: (arg0: string[]) => void; }): void; (arg0: string, arg1: any): void; }) {
+    try{
+      const result = await this.fbAuth.signInWithEmailAndPassword(
+        email, senha
+      );
+      callback(email, nav)
 
-  private async execLogin(email: string, senha: string) {
-    try {
+      return { result : result } as UserResponse;
+    } catch(error) {
+      console.log("Ocorreu um erro ao tentar logar: " + error)
+
       return  {
-        result: await this.fbAuth.signInWithEmailAndPassword(
-          email, senha
-        )
-      } as UserResponse;
-    } catch (e) {
-      console.log(JSON.stringify(e));
-      return  {
-        error: e
+        error: error
       } as UserResponse;
     }
   }

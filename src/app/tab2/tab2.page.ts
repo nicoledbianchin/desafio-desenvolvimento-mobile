@@ -9,17 +9,17 @@ import { ModalPage } from '../modal/modal.page';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  @ViewChild('map')mapRef!: ElementRef;
-  map!: GoogleMap;
-  constructor(private modalCtrl: ModalController) {}
+  @ViewChild('mapa')mapRef!: ElementRef;
+  mapa!: GoogleMap;
+  constructor(private modalC: ModalController) {}
 
   ionViewDidEnter() {
-    this.createMap();
+    this.criaMapa();
   }
 
-  async createMap() {
-    this.map = await GoogleMap.create({
-      id: 'my-map',
+  async criaMapa() {
+    this.mapa = await GoogleMap.create({
+      id: 'mapa-clientes',
       apiKey: 'AIzaSyCUcp4qVaSfiWaplQULTP6rExLV4eJRV8w',
       element: this.mapRef.nativeElement,
       forceCreate: true,
@@ -31,11 +31,11 @@ export class Tab2Page {
         zoom: 16,
       }
     })
-    await this.addMarkers();
+    await this.criaMarcadores();
   }
 
-  async addMarkers() {
-    const markers: Marker[] = [
+  async criaMarcadores() {
+    const clientes: Marker[] = [
       {
         coordinate: {
           lat: -29.695666114544306,
@@ -46,12 +46,12 @@ export class Tab2Page {
       }
     ]
     
-    const result = await this.map.addMarkers(markers);
+    await this.mapa.addMarkers(clientes);
 
-    this.map.setOnMarkerClickListener(async(marker) => {
-      const modal = await this.modalCtrl.create({
+    this.mapa.setOnMarkerClickListener(async(cliente) => {
+      const modal = await this.modalC.create({
         component: ModalPage,
-        componentProps: { marker },
+        componentProps: { cliente },
         breakpoints: [0, 0.3],
         initialBreakpoint: 0.3
       });
