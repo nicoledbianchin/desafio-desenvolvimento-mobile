@@ -12,7 +12,7 @@ import { Catalogo, Produto } from '../models';
 export class Tab1Page {
   catalogo!: Catalogo;
 
-  constructor(private router: Router, private db: AngularFireDatabase, private http: HttpClient) {
+  constructor(private router: Router, private http: HttpClient) {
     this.getData();
   }
 

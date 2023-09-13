@@ -19,6 +19,12 @@ export interface ProdutoCarrinho {
     key?: string;
 }
 
+export interface Cliente {
+    nome: string;
+    telefone: string;
+    descricao: string;
+}
+
 export interface UserResponse {
     result?: {
         email?: string;

@@ -13,10 +13,10 @@ export class Tab3Page {
   valorTotal: number = 0;
 
   constructor(private db: AngularFireDatabase, private router: Router) {
-    this.getAll();
+    this.buscarDados();
   }
 
-  getAll() {
+  buscarDados() {
     this.db.list('carrinho', ref => ref.orderByChild('date'))
     .snapshotChanges()
     .subscribe(changes => {

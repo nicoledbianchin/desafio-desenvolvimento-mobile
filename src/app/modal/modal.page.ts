@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Cliente } from '../models';
 
 @Component({
   selector: 'app-modal',
@@ -7,10 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ModalPage implements OnInit {
   @Input() cliente: any;
+  @Input() clienteInfo!: Cliente;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  exibeMarker(marker: any){
+    console.log(marker)
   }
 
 }
